@@ -4,4 +4,4 @@
 [algorithom](https://github.com/ef4555/TIL/tree/master/algorythm) 
 
 
-[python repo](https://github.com/ef4555/TIL/tree/master/python)
+[python repo](https://github.com/ef4555/TIL/tree/master/python)git 
