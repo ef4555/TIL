@@ -2,5 +2,6 @@
 
 
 [algorithom](https://github.com/ef4555/TIL/tree/master/algorythm) 
-\n
+
+
 [python repo](https://github.com/ef4555/TIL/tree/master/python)
