@@ -18,8 +18,8 @@ git init 명령어로 로컬 저장소를 생성
 
 .git 디렉토리에 버전 관리에 필요한 모든 것이 들어있음
 
-![Untitled](Git%E1%84%80%E1%85%AA%20Github%2098f7c567abb24328ab3cff4f3bef3a8c/Untitled%201.png)
-
+ 
+ 
 git init 하면
 
 .git 폴더는 숨김 폴더로 생성
