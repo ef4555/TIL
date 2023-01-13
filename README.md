@@ -1,7 +1,7 @@
 #나는 오늘 무엇을 공부했는가 
 
 
-[TIL](https://github.com/ef4555/TIL/tree/master/FIL)
+[record](https://github.com/ef4555/TIL/tree/master/FIL)
 
 
 [algorithom](https://github.com/ef4555/TIL/tree/master/algorithm)
