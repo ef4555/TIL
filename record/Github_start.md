@@ -84,3 +84,50 @@ staging area에서 커밋할 것과 안할 것을 구분한다
 remote repository
 
 내가 소유한 remote를 보통 origin 이라고 함.
+
+git remote ~~~ 원격 저장소 관련 세팅 명령어
+
+gir remote add origin 주소 : 원격 저장소 설정s
+
+git remote -v : 지금 어디가 원격 저장소인지 확인
+
+git log —oneline : 상태 한줄로 알려줌
+
+git push -u origin master : 원격 저장소에 푸시
+
+단어 앞글자만 치고 탭 누르면 자동완성
+설정 끝
+
+연결이 되어 있으니까 이제는 git push 만 쳐도 자동으로 알아서 올라간다.
+
+git clone 원격 저장소 주소
+
+깃 저장소에 있는 것 다운로드 받음
+
+* 자격증명
+컴퓨터에 자격 증명이 저장되어있음
+
+컴퓨터를 옮길 때 제거 해줘야 함.
+
+- 설정 끝
+
+연결이 되어 있으니까 이제는 git push 만 쳐도 자동으로 알아서 올라간다. 
+
+1. 로컬 생성
+2. root commit
+3. remote repo 만들기
+4. remote add .
+5. git push
+
+
+# 깃을 이용한 협업 체험
+
+- shared repository
+    - git remote add origin 주소 에서 origin이 권한
+    
+
+git commit 했는데 변화 없을 때 : 오타 아니면 저장 안한 거
+
+vim 파일 : 파일 여는것
+
+wq : 파일에서 빠져나오기
