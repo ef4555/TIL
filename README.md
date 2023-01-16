@@ -7,3 +7,6 @@
 
 
 - [**python repo**](https://github.com/ef4555/TIL/tree/master/python)
+
+
+- [**연산자**](https://github.com/ef4555/TIL/blob/master/record/01W3/20230116.md#%EC%97%B0%EC%82%B0%EC%9E%90)
