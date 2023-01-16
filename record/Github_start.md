@@ -27,6 +27,8 @@ git init 하면
 ls -a 명령어로 확인 가능하나 보이지는 않는다
 
 절대로 루트 디렉토리에는 git init을 하면 안된다
+이미 master인 파일에 git init 하면 안된다
+git init 한 파일 하위 폴더에 git init 하면 안된다(중첩 안됨)
 
 - **초기 설정**
 
