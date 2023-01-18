@@ -18,4 +18,7 @@
 - [**내가 필기한 python 기초2(제어문)**](https://github.com/ef4555/TIL/blob/master/record/01W3/20230117.md#%EC%A0%9C%EC%96%B4%EB%AC%B8)
 
 
+- [**내가 필기한 python 기초3(함수)**](https://github.com/ef4555/TIL/blob/master/record/01W3/20230118.md#%ED%95%A8%EC%88%98)
+
+
 - [**내장 함수 정리**](https://github.com/ef4555/TIL/blob/master/record/fuction.md)
