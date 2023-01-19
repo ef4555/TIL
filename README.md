@@ -19,7 +19,6 @@
 
 
 - [**내가 필기한 python 기초3(함수)**](https://github.com/ef4555/TIL/blob/master/record/01W3/20230118.md#%ED%95%A8%EC%88%98)
-https://github.com/ef4555/TIL/blob/master/record/01W3/20230119.md
 
 
 - [**내가 필기한 python 기초4(함수의 응용)**](https://github.com/ef4555/TIL/blob/master/record/01W3/20230119.md)
