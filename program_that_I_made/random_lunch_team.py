@@ -1,4 +1,5 @@
 import random
+import time
 
 
 list_03 = [
@@ -19,7 +20,7 @@ def not_here(): # 결석한 사람 여부를 판별하여 반 리스트에서 �
             saram_num = int(input('결석한 사람 수를 입력해주세요(숫자만 입력) : '))  # 결석한 사람의 수를 입력받는다
             if saram_num != 0: # 결석한 사람이 있으면(결석한 사람의 수가 0이 아니면)
                 count = 1 # 반복 횟수를 카운트 할 변수
-                print('결석한 사람을 순차적으로 입력해주세요')
+                print('결석한 사람을 순차적으로 입력해주세요, 처음으로 돌아가시려면 restart 입력해주세요')
                 while count <= saram_num: # 반복 횟수를 카운트 할 변수가 입력받은 사람의 수가 될 때까지 반복한다.
                     saram_name = input(f'결석한 사람 이름을 입력해주세요 #{count} : ') # 결석한 사람의 이름을 변수에 저장한다.
                     if saram_name in list_03 and saram_name not in not_here_saram: # 입력받은 사람의 이름이 우리 3반 이름 리스트에 존재하면
@@ -27,8 +28,12 @@ def not_here(): # 결석한 사람 여부를 판별하여 반 리스트에서 �
                         count += 1 # 반복 횟수에 1을 더한다.
                     elif saram_name in not_here_saram:
                         print('이미 입력한 인원입니다.') # 입력받은 이름이 이미 입력한 이름이며 다시  입력하라고 출력한다.
-                    elif saram_name not in list_03:
+                    elif saram_name not in list_03 and saram_name != 'restart':
                         print('이름을 잘못 입력하셨습니다. 해당 인원은 서울3반이 아닙니다.')# 입력받은 이름이 3반 명단에 없으면 다시 입력하라고 출력한다.
+                    elif saram_name == 'restart':
+                        print('다시 시작합니다.')
+                        return not_here()
+
                 yn_count = 0 # 예 아니오를 판별하는 변수 
                 while yn_count == 0: 
                     saram_yes_no = input(f'결석한 사람은 {not_here_saram}이고 총{len(not_here_saram)}명입니다. 맞습니까?(예/아니오) : ')
@@ -52,7 +57,7 @@ def not_here(): # 결석한 사람 여부를 판별하여 반 리스트에서 �
 
     else: # 예 아니오로 대답하지 않았을 시
         print('예/아니오로 답해주세요')
-        not_here()
+        return not_here()
 
 def lunch_div(): # 인원을 랜덤으로 나누는 함수
     try:
@@ -84,15 +89,31 @@ def lunch_div(): # 인원을 랜덤으로 나누는 함수
         return lunch_div()
 
 def ran_bap(num): # 랜덤으로 점심 조를 추출하는 함수
+    time.sleep(0.5)
+    print('카운트다운 시작!')
+    time.sleep(1)
+    print('두구'*20)
+    time.sleep(1)
+    for sec in range(3,0,-1):
+        print(f'{sec}')
+        time.sleep(0.8)
+    print('랜덤!!')
+    time.sleep(0.5)
     while len(list_03) >= int(num): # 3반 명단 리스트의 남은 인원이 나누는 수보다 작아질 때 까지
         team = random.sample(list_03, int(num)) # 랜덤으로 나누는 수만큼 뽑아서 team 변수에 저장
         print(f'{team}끼리 맛점하세요~') # 뽑은 인원을 출력
+        time.sleep(0.2)
+        print(f'\n')
         for a in team: # 랜덤으로 뽑은 이름들을
             list_03.remove(a) # 3반 명단에서 제거
+            if len(list_03) == 0:
+                print('즐거운 점심시간~~~~')
     if len(list_03) ==  1: # 3반 명단에 혼자 남게 된 경우
         print(f'그리고 {list_03} 혼밥하세요~')
+        print('즐거운 점심시간~~~~')
     elif len(list_03) > 1: # 랜덤 점심 팀에 뽑히지 않고 남은 인원
         print(f'{list_03}끼리 맛점하세요~')
+        print('즐거운 점심시간~~~~')
 
 
 
