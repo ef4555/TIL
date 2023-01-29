@@ -22,6 +22,7 @@ def not_here(): # 결석한 사람 여부를 판별하여 반 리스트에서 �
                 count = 1 # 반복 횟수를 카운트 할 변수
                 print('결석한 사람을 순차적으로 입력해주세요, 처음으로 돌아가시려면 restart 입력해주세요')
                 while count <= saram_num: # 반복 횟수를 카운트 할 변수가 입력받은 사람의 수가 될 때까지 반복한다.
+                    time.sleep(0.3)
                     saram_name = input(f'결석한 사람 이름을 입력해주세요 #{count} : ') # 결석한 사람의 이름을 변수에 저장한다.
                     if saram_name in list_03 and saram_name not in not_here_saram: # 입력받은 사람의 이름이 우리 3반 이름 리스트에 존재하면
                         not_here_saram.append(saram_name) # 결석한 사람의 이름을 담는 리스트 not_here_saram에 입력받은 이름 저장한다.
@@ -91,14 +92,14 @@ def lunch_div(): # 인원을 랜덤으로 나누는 함수
 def ran_bap(num): # 랜덤으로 점심 조를 추출하는 함수
     time.sleep(0.5)
     print('카운트다운 시작!')
-    time.sleep(1)
+    time.sleep(0.8)
     print('두구'*20)
-    time.sleep(1)
+    time.sleep(0.8)
     for sec in range(3,0,-1):
         print(f'{sec}')
-        time.sleep(0.8)
+        time.sleep(0.7)
     print('랜덤!!')
-    time.sleep(0.5)
+    time.sleep(0.4)
     while len(list_03) >= int(num): # 3반 명단 리스트의 남은 인원이 나누는 수보다 작아질 때 까지
         team = random.sample(list_03, int(num)) # 랜덤으로 나누는 수만큼 뽑아서 team 변수에 저장
         print(f'{team}끼리 맛점하세요~') # 뽑은 인원을 출력
@@ -110,10 +111,10 @@ def ran_bap(num): # 랜덤으로 점심 조를 추출하는 함수
                 print('즐거운 점심시간~~~~')
     if len(list_03) ==  1: # 3반 명단에 혼자 남게 된 경우
         print(f'그리고 {list_03} 혼밥하세요~')
-        print('즐거운 점심시간~~~~')
+        print('\n즐거운 점심시간~~~~')
     elif len(list_03) > 1: # 랜덤 점심 팀에 뽑히지 않고 남은 인원
         print(f'{list_03}끼리 맛점하세요~')
-        print('즐거운 점심시간~~~~')
+        print('\n즐거운 점심시간~~~~')
 
 
 
