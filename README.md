@@ -1,5 +1,8 @@
 # **Today I Learned**
 
+<summary> 파이썬 기본 </summary>
+<details>
+
 - [**Github 스타트**](https://github.com/ef4555/TIL/blob/master/record/Github_start.md)
 
 
@@ -23,5 +26,9 @@
 
 - [**내가 필기한 python 기초4(함수의 응용)**](https://github.com/ef4555/TIL/blob/master/record/01W3/20230119.md)
 
+</details>
 
 - [**내장 함수 정리**](https://github.com/ef4555/TIL/blob/master/record/fuction.md)
+
+
+- [**알고리즘 1주차 배열(버블 정렬, 카운트 정렬 그리디)**]https://github.com/ef4555/TIL/tree/master/record/02W1
