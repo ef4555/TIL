@@ -1,7 +1,10 @@
 # **Today I Learned**
 
-<summary> 파이썬 기본 </summary>
+## 파이썬 기본
 <details>
+<summary> 파이썬 기본 </summary>
+
+## 파이썬 기본 
 
 - [**Github 스타트**](https://github.com/ef4555/TIL/blob/master/record/Github_start.md)
 
@@ -28,7 +31,9 @@
 
 </details>
 
+## 알고리즘 관련
+
 - [**내장 함수 정리**](https://github.com/ef4555/TIL/blob/master/record/fuction.md)
 
 
-- [**알고리즘 1주차 배열(버블 정렬, 카운트 정렬 그리디)**]https://github.com/ef4555/TIL/tree/master/record/02W1
+- [**알고리즘 1주차 배열(버블 정렬, 카운트 정렬 그리디)**](https://github.com/ef4555/TIL/tree/master/record/02W1)
