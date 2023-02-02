@@ -11,6 +11,7 @@ for c in range(1, T+1): # 1부터 테스트 케이스 갯수-1까지
     for i in range(9*(c-1), 9*c):
         a = list(sys.stdin.readline().split()) 
         soo.extend(a)
+    print(soo)
     garo = True
     sero = True
     nemo = True

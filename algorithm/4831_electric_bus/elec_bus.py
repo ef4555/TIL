@@ -9,7 +9,9 @@ for ii in range(1, T+1):
     st = 0
     choong = 0
 
-    while st < N:
+    while True:
+        if st+K >= N:
+            break
         a = []
         b = []
         st += K
@@ -18,12 +20,21 @@ for ii in range(1, T+1):
                 a.append(i)
             else:
                 b.append(i)
-        if b == []:
-            choong += 1
-            break
-        elif  a[-1]+ K < b[0] :
+        if a == []:
             choong = 0
             break
+        if b == []:
+            if st+K > N:
+                choong += 1
+                break
+        elif a == []:
+            break
+        elif a[-1] + K < b[0]:
+            choong = 0
+            break
+
+
+
         st = a[-1]
         choong += 1
     print(f'#{ii} {choong}')
