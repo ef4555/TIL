@@ -4,8 +4,6 @@
 <details>
 <summary> 파이썬 기본 </summary>
 
-## 파이썬 기본 
-
 - [**Github 스타트**](https://github.com/ef4555/TIL/blob/master/record/Github_start.md)
 
 
