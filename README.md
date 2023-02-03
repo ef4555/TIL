@@ -1,5 +1,12 @@
 # **Today I Learned**
 
+
+- [**SAP 교육**](https://events.sap.com/kr/sap-young-next-cloud-2022/ko/home)
+- **애플 디벨로퍼 아카데미**
+- **우테코**
+- **SW 마에스트로**
+
+
 ## 파이썬 기본
 <details>
 <summary> 파이썬 기본 </summary>
