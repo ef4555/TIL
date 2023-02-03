@@ -31,7 +31,7 @@
 
 ## 알고리즘 관련
 
-- [**알고리즘 풀기 전에 한번 읽고 시작하기**]()
+- [**알고리즘 풀기 전에 한번 읽고 시작하기**](https://github.com/ef4555/TIL/blob/master/record/02W1/20230203.md)
 
 
 - [**내장 함수 정리**](https://github.com/ef4555/TIL/blob/master/record/fuction.md)
