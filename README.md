@@ -35,3 +35,6 @@
 
 
 - [**알고리즘 1주차 배열(버블 정렬, 카운트 정렬 그리디)**](https://github.com/ef4555/TIL/tree/master/record/02W1)
+
+
+- [**복잡한 리스트 보기좋게 출력하기**]https://www.daleseo.com/python-lists-print/
