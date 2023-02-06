@@ -12,7 +12,7 @@ sys.stdin = open('practice1.txt')
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
-    arr = [[0] * N for i in range(N)]
+    arr = [[0] * N for i in range(N)] # d
     for g in range(N):
         arr[g] = list(map(int, input().split()))
     hap = []
