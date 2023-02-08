@@ -40,34 +40,22 @@ for tc in range(1, T+1):
     tri1 = 0
     for g in range(N):
         puzzle_garo[g] = list(map(int, input().split()))
-    for ga in puzzle_garo:
-        cnt1 = 0
-        for garo in range(N-1):
-            if ga[garo] == 1 and ga[garo+1] == 1:
-                cnt1 += 1
-            elif ga[garo] != ga[garo+1]:
-                if cnt1 == K-1:
-                    tri1 += 1
-
-
     puzzle_sero = [[0]*N for _ in range(N)]
     for l in range(N):
         for o in range(N):
             puzzle_sero[l][o] = puzzle_garo[o][l]
     print(puzzle_garo)
     print(puzzle_sero)
-    for se in puzzle_sero:
-        cnt2 = 0
-        for sero in range(N-1):
-            if se[sero] == 1 and se[sero+1] == 1:
-                cnt2 += 1
-            elif se[sero] != se[sero+1]:
-                if cnt2 == K-1:
-                    tri2 += 1
-            
-    print(tri1)
-    print(tri2)
-    print(f'#{tc} {tri1+tri2}')
+    tri1 = 0
+    for i in range(N):
+        cnt1= 0
+        for j in range(N):
+            if puzzle_garo[i][j] == 1 :
+                cnt1 += 1
+                print(cnt1)
+
+
+    print(f'#{tc} {tri1} {tri2}')
 
 
 
