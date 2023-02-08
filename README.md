@@ -2,6 +2,7 @@
 
 <details>
 <summary> 부트캠프 참고 </summary>
+
 - [**SAP 교육**](https://events.sap.com/kr/sap-young-next-cloud-2022/ko/home)
 - **애플 디벨로퍼 아카데미**
 - **우테코**
@@ -46,7 +47,7 @@
 - [**내장 함수 정리**](https://github.com/ef4555/TIL/blob/master/record/fuction.md)
 
 
-- [**정렬 정리**]()
+- [**정렬 정리**](https://github.com/ef4555/TIL/blob/master/record/sort.md)
 
 
 - [**복잡한 리스트 보기좋게 출력하기**](https://www.daleseo.com/python-lists-print/)
