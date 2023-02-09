@@ -1,3 +1,7 @@
+'''
+소인수 분해를 하는 문제
+'''
+
 import sys
 
 sys.stdin = open('sooo.txt')
