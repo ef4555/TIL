@@ -3,13 +3,14 @@
 - [**record**](https://github.com/ef4555/TIL/tree/master/record)
 
 
-- [**algorithom**](https://github.com/ef4555/TIL/tree/master/algorithm)
-
-
-- [**python repo**](https://github.com/ef4555/TIL/tree/master/python)
+- [**algorithm**](https://github.com/ef4555/TIL/tree/master/algorithm)
 
 
 - [**aha_point**](https://github.com/ef4555/TIL/blob/master/record/memorable/aha_point.md)
+
+
+- [**Review**](https://github.com/ef4555/TIL/blob/master/record/memorable/aha_point.md)
+
 
 
 ## 알고리즘 문제 풀기 원칙 
@@ -54,4 +55,3 @@
 - **우테코**
 - **SW 마에스트로**
 
-<details>

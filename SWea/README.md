@@ -1,1 +1,1 @@
-# SWea 문제 정리
+# SWea problems that I solved
