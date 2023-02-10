@@ -1,12 +1,12 @@
 # **Today I Learned**
 
-- [**record**](https://github.com/ef4555/TIL/tree/master/record)
+- [**Record**](https://github.com/ef4555/TIL/tree/master/record)
 
 
-- [**algorithm**](https://github.com/ef4555/TIL/tree/master/algorithm)
+- [**Algorithm**](https://github.com/ef4555/TIL/tree/master/algorithm)
 
 
-- [**aha_point**](https://github.com/ef4555/TIL/blob/master/record/memorable/aha_point.md)
+- [**Aha_point**](https://github.com/ef4555/TIL/blob/master/record/memorable/aha_point.md)
 
 
 - [**Review**](https://github.com/ef4555/TIL/blob/master/record/memorable/aha_point.md)
