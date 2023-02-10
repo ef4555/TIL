@@ -60,11 +60,11 @@ for tc in range(1, T+1):
     l = N//2 # N값의 중간값(인덱스 기준)
     hap = []
     for i in range(l):
-        # print(batt_garo[i][l-i:l+i+1])
-        hap.extend(batt_garo[i][l-i:l+i+1])
+        print(batt_garo[i][l-i:l+i+1])
+        hap += (batt_garo[i][l-i:l+i+1])
     for j in range(l+1):
-        # print(batt_garo[l+j][j:N-j])
-        hap.extend(batt_garo[l+j][j:N-j])
+        print(batt_garo[l+j][j:N-j])
+        hap += (batt_garo[l+j][j:N-j])
     money = 0
     for k in hap:
         money += int(k)
