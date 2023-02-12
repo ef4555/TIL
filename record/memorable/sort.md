@@ -16,6 +16,7 @@
     - 교환하며 자리를 이동하는 모습이 물 위에 올라오는 거품 모양과 같다고 하여 버블 정렬이라고 한다.
     - 시간 복잡도 O(n**2)
     - 반복하는 변하는 것을 파악. 반목문으로 구현
+
 ```python
 # 버블 정렬 (선택 정렬과 비슷한 꼴)
 for i in range(N-1, 0, -1): # 정렬이 끝나면 최대값이 맨 뒤에 있으므로 i가 하나씩 준다. 한도 범위를 줄여주는 역할
@@ -76,6 +77,8 @@ def SelectionSort(a[], n):
         a[i],....,a[n-1] 원소들 중 최소값 a[k] 찾음
         a[i]와 a[k] 교환
 ```
+
+
 ```python
 def SelectionSort(a, N): # a 는 정렬할 리스트 N은 리스트 길이
     for i in range(N-1): # 처음부터 시작
@@ -118,17 +121,18 @@ def binarySearch(a, N, key)
     start = 0
     end = N-1
     while start <= end :
-    middle = (start + end) // 2 # 가운데 값 지정
-    if a[middle] == key : # 검색 성공
-        return True
-    elif a[middle] > key :
-        end = middle-1
-    else:
-        start = middle+1
-    return False # 검색 실패
+        middle = (start + end) // 2 # 가운데 값 지정
+        if a[middle] == key : # 검색 성공
+            return True
+        elif a[middle] > key :
+            end = middle-1
+        else:
+            start = middle+1
+        return False # 검색 실패
 ```
 
 - 재귀함수 이용한 구현
+
 ```python
 def binarySearch2(a, low, high, key):
     if low > high:
