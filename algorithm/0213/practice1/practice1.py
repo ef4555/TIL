@@ -22,3 +22,4 @@ if top > -1:
     top -= 1
     print(stack[top+1])
 
+print(stack)
