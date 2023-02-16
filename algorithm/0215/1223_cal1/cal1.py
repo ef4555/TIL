@@ -28,14 +28,14 @@
 
 
 import sys
-sys.stdin = open('cal2.txt')
+sys.stdin = open('cal1.txt')
 T = 10
 for tc in range(1, T+1):
     # 코드로 구현
     N = int(input())
     infix = input()
-    stack = []
-    result = ''
+    stack = [] # 연산자 저장할 스택
+    result = '' # 후위연산자로 나태날 출력값 저장
     # 변환할 식을 순회
     for token in infix:
         # 토큰이 피연산자인 경우
@@ -61,7 +61,7 @@ for tc in range(1, T+1):
                     stack.pop()
                 # incoming 우선순위가 2인 경우
                 elif token == '*' or token == '/':
-                    # stack의 top의 토큰이 우선순위가 낮을 때까지 stack pop, result에 append
+                    # stack의 top의 토큰이 우선순위가 낮을 때까지(*나/나올때까지) stack pop, result에 append
                     while stack and stack[-1] in '*/':
                         result += stack.pop()
                     stack.append(token)
