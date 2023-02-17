@@ -10,22 +10,11 @@ NxN 배열에 숫자가 들어있다. 한 줄에서 하나씩 N개의 숫자를 
 각 줄마다 "#T" (T는 테스트 케이스 번호)를 출력한 뒤, 합계를 출력한다.
 
 
-
-3
-9 4 7
-8 6 5
-5 3 7
-5
-5 2 1 1 9
-3 3 8 3 1
-9 2 8 8 6
-1 5 7 8 3
-5 5 4 6 8
 '''
 import sys
 sys.stdin = open('bae_min_hap.txt')
 
-def dfs(row, n, now_sum, visited):
+def backtrack(row, n, now_sum, visited):
     global min_sum  # 최소 합을 전역변수로 선언
     if row == n:  # row가 배열의 수와 일치하면
         if now_sum < min_sum:
@@ -34,26 +23,22 @@ def dfs(row, n, now_sum, visited):
         return  # 현재 부분합이 더 크면 탐색 중지
 
     else:
-        for col in range(n):
-            if not visited[col]:  # 방문 전인 칼럼
+        for col in range(n): # 열 0, 1, 2 순회하면서 갈림길 만든다.
+            if not visited[col]:  # 열 0, 1, 2 순회하면서 방문 전인 칼럼
                 visited[col] = 1  # 방문 처리
                 # 다음 열로 넘어가고 now_sum에 값을 더해주고, visited 갱신
-                dfs(row + 1, n, now_sum + lst[row][col], visited)
+                backtrack(row + 1, n, now_sum + num[row][col], visited)
                 visited[col] = 0  # 함수 적용 후 초기화(재검색 할 수 있도록)
 
 T = int(input())
-for tc in range(1, T+1):
-    N = int(input())
-    lst = [[0] * N for _ in range(N)]
-    for l in range(N):
-        lst[l] = list(map(int, input().split()))
-    print(lst)
-    min_sum = 100
-    visited = [[0]*N for _ in range(N)]
-
-    dfs(0, N, 0, visited)
-    print(visited)
-    print(f'#{tc} {min_sum}')
+for tc in range(T):
+    n = int(input())
+    num = [list(map(int, input().split())) for _ in range(n)]
+    min_sum = 100 # 값을 대체해주기 임의의 큰 수 대입
+    visited = [0]*n # 방문 확인용
+    
+    backtrack(0,n,0,visited) # 함수시작 
+    print(f'#{tc+1} {min_sum}')
 
 
 
