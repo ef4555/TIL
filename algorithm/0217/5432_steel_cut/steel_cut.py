@@ -31,7 +31,6 @@ for tc in range(1, T+1):
     # print(st)
     cnt = 0
     stack = []
-    status = []
     for i in range(len(st)):
         if st[i] == '(': # ( 이면 무조건 추가
             stack.append(st[i])

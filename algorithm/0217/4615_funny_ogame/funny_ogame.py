@@ -38,15 +38,15 @@ for tc in range(1, T + 1):
             for mul in range(1, N): # 증가하면서 찾아냄
                 nj = sj + d[j][0]*mul  # 세로 좌표
                 ni = si + d[j][1]*mul  # 가로 좌표
-                if 1 <= ni <= N and 1 <= nj <= N:
-                    if arr[ni][nj] != c: # 자신의 돌 색깔과 다른 돌 발견하면
-                        # 그 방향으로 탐색 계속해서 같은 돌 색깔이 나오면 중지해야함...
-                        # 후보 스택에 쌓아놓고 같은 돌 색이 나오면 터트리는 방식
-                        hoobo.append((ni, nj))
-                    else:
-                        for kk in hoobo: # 같은 돌 발견하면 스택에서 좌표들 꺼내서
-                            arr[kk[0]][kk[1]] = c # 그 동안 있던 돌 뒤집기
-                        break # 탐색 끝
+                # if 1 <= ni <= N and 1 <= nj <= N:
+                if arr[ni][nj] != c: # 자신의 돌 색깔과 다른 돌 발견하면
+                    # 그 방향으로 탐색 계속해서 같은 돌 색깔이 나오면 중지해야함...
+                    # 후보 스택에 쌓아놓고 같은 돌 색이 나오면 터트리는 방식
+                    hoobo.append((ni, nj))
+                else:
+                    for kk in hoobo: # 같은 돌 발견하면 스택에서 좌표들 꺼내서
+                        arr[kk[0]][kk[1]] = c # 그 동안 있던 돌 뒤집기
+                    break # 탐색 끝
 
     for ii in range(1, N+1): # 흰돌 검은돌 갯수 세기(범위 주의! 1부터 N까지 세어야 한다, arr는 0으로 둘러싸져있음)
         for jj in range(N+1):
