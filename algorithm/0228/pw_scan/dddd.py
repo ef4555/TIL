@@ -1,0 +1,1 @@
+print(len('C99624DDAF324C'))
