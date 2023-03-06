@@ -11,10 +11,11 @@ for tc in range(1, T+1):
         for j in range(M):
             cnt = arr[i][j]
             for k in range(4):
-                ni = i + d[k][1]
-                nj = j + d[k][0]
-                if 0 <= ni < N and 0 <= nj < M:
-                    cnt += arr[ni][nj]
+                for mul in range(1, arr[i][j]+1):
+                    ni = i + mul * d[k][1]
+                    nj = j + mul * d[k][0]
+                    if 0 <= ni < N and 0 <= nj < M:
+                        cnt += arr[ni][nj]
             if b_max <= cnt:
                 b_max = cnt
     print(f'#{tc} {b_max}')
