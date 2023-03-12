@@ -1,0 +1,46 @@
+<body>
+    <h1 class="green">SSAFY</h1>
+    <h2>선택자 연습</h2>
+    <div class="green box">
+        box contents
+        <div>
+            <p>지역 목록</p>
+            <ul>
+                <li>서울</li>
+                <li id = "purple">인천</li>
+                <li>강원</li>
+                <li>경기</li>
+            </ul>
+        </div>
+        <p>lorem + tab : 랜덤한 문자열 자동 생성!</p>
+    </div>
+    <h3>Hello</h3>
+    <h4>CSS</h4>
+</body>
+<style>
+    *{
+        color : red;
+    }
+    h2{
+        color : orange;
+    }
+    h3,
+    h4{
+        font-size : 10px;
+    }
+    .green{
+        color : green;
+    }
+    #purple{
+        color : purple;
+    }
+    /*자식 결합자 : 클래스 box의 자식 중에서 p태그인것 적용*/
+    .box > p {
+        font-size: 30px;
+    }
+    /*자손 결합자 : 띄어쓰기를 하면 클래스 박스 아래의 모든 p태그에 적용*/
+    .box p {
+        color: blue;
+    }
+
+</style>

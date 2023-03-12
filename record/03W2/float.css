@@ -1,0 +1,12 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+
+    float: left;
+    margin-right: 20px;
+}
+
+.box2 {
+    background-color: aquamarine;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rd {
+            width: 100%;
+            height: 50px;
+            background-color: red;
+        }
+        .tm{
+            color: white;
+            padding-top: 13px;
+            padding-left: 10px;
+        }
+        .ss{
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .f {
+            border: solid 1px gray;
+        }
+        .cen {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .btt {
+            display: block;
+            width: 95%;
+            margin: 3px auto;
+            height: 30px;
+        }
+        .box {
+            width: 100%;
+        }
+        .bb {
+            text-align: center;
+            margin-top: 3px;
+            padding-bottom: 3px;
+            border-bottom: 2px solid blue;
+            font-weight: bold;
+        }
+        .green {
+            background-color: rgb(67, 130, 67) ;
+            border: 1px white;
+            color: white;
+            height: 30px;
+        }
+        .tx {
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .rm {
+            float: left;
+            width: 5%;
+        }
+        .r {
+            border-radius: 3%
+            border: 1px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="rd">
+        <p class="tm">Invalid Login or password</p>
+    </div>
+    <h2 class="SS">SSAFY 전용 Gitlab 시스템</h2>
+    <div class="f box r">
+        <form method="post" action="서버의url" id="login-form">
+            <div>
+                <p class="bb">Sign in</p>
+            </div>
+            <div>
+                <p class="btt tx">Username or Email</p>
+                <input class="btt r" type="text" name="userName" placeholder="">
+            </div>
+            <div>
+                <p class="btt tx">password</p>
+                <input class="btt r" type="password" name="userPassword" placeholder="">
+            </div>
+            <div>
+                <label for="remember-check">
+                    <input class="rm" type="checkbox" id="remember-check">remember me
+                </label>
+            </div>
+            <input class="btt green" type="button" value="Sign in">
+        </form>
+    </div>
+    
+</body>
+</html>

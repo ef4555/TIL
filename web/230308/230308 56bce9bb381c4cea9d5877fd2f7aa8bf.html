@@ -1,0 +1,710 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>230308</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="56bce9bb-381c-4cea-9d58-77fd2f7aa8bf" class="page sans"><header><h1 class="page-title">230308</h1></header><div class="page-body"><h2 id="b0588239-914f-432c-ab67-94ebe9c670e8" class="">Box Model</h2><ul id="f16cb988-b558-486a-b1a8-788e0d118a94" class="bulleted-list"><li style="list-style-type:disc">CSS 원칙 1<ul id="86f6f362-5a72-46da-8801-eedd669f6044" class="bulleted-list"><li style="list-style-type:circle">모든 요소는 <mark class="highlight-red">네모(박스 모델)</mark>이고, 위에서부터 아래로, 왼쪽에서 오른쪽으로 쌓인다<mark class="highlight-red">(좌측 상단에 배치)</mark></li></ul><ul id="845edefc-89f2-4f54-a317-b396cdad7ab3" class="bulleted-list"><li style="list-style-type:circle">하나의 박스는 네 부분으로 이루어짐<ul id="ab45c5f7-d642-4d63-b5a7-c942a0fe4568" class="bulleted-list"><li style="list-style-type:square">content</li></ul><ul id="eea25d98-0466-4e7f-87c6-17d9b7408e56" class="bulleted-list"><li style="list-style-type:square">padding</li></ul><ul id="3075281e-7390-4d30-b13f-10849e2c0170" class="bulleted-list"><li style="list-style-type:square">border</li></ul><ul id="eeabf92e-8e01-436a-b550-a5ad4459c232" class="bulleted-list"><li style="list-style-type:square">margin</li></ul></li></ul></li></ul><ul id="c799a435-a15a-4ebd-ab8c-2fb2087fb058" class="bulleted-list"><li style="list-style-type:disc">Box Model 구성<figure id="3887393a-5752-464c-8980-14ab3b8238d8" class="image"><a href="230308%2056bce9bb381c4cea9d5877fd2f7aa8bf/Untitled.png"><img style="width:240px" src="230308%2056bce9bb381c4cea9d5877fd2f7aa8bf/Untitled.png"/></a></figure><ul id="13ac359c-72e6-4c45-946d-ef3cc4493f4e" class="bulleted-list"><li style="list-style-type:circle">Content<ul id="561e962c-2a46-4cd0-9ab7-8da303a6c872" class="bulleted-list"><li style="list-style-type:square">글이나 이미지 등</li></ul><ul id="c8fbd47b-fd30-4362-88cb-0b5393b96e09" class="bulleted-list"><li style="list-style-type:square">요소의 실제 내용</li></ul></li></ul><ul id="1a10342d-afea-4fe7-925a-449ee73f4df1" class="bulleted-list"><li style="list-style-type:circle">Padding<ul id="e86eca91-d5ca-40a8-9742-6e95b09e3e7f" class="bulleted-list"><li style="list-style-type:square">테두리 안쪽의 내부 여백</li></ul><ul id="f2c8ff0c-d45f-44d0-b2af-8f46f8fa243e" class="bulleted-list"><li style="list-style-type:square">요소에 적용된 배경색</li></ul><ul id="fdcb256d-5ada-4857-a082-c83142e6ad3a" class="bulleted-list"><li style="list-style-type:square">이미지는 padding까지 적용</li></ul><pre id="febf539c-184e-450a-bc43-d8f5279b1864" class="code"><code>.margin-padding{
+	margin: 10px;
+	padding: 30px;
+}</code></pre></li></ul><ul id="fdbd5f35-d37e-4fd9-ace0-7836776dbdac" class="bulleted-list"><li style="list-style-type:circle">Border<ul id="60d17683-f328-47f3-ba70-7e694598d189" class="bulleted-list"><li style="list-style-type:square">테두리 영역</li></ul><pre id="8cd7be21-8db7-494b-b9af-6201460deebb" class="code"><code>.border{
+	border-width: 2px;
+	border-style: dashed;
+	border-color: black;
+}</code></pre></li></ul><ul id="d74bd967-d41b-45a1-a1f5-df0ce04f5171" class="bulleted-list"><li style="list-style-type:circle">Margin<ul id="7d31a99b-55ac-41c3-baf7-8c73108fa839" class="bulleted-list"><li style="list-style-type:square">테두리 바깥의 외부여백</li></ul><ul id="08337b15-106d-4488-9a58-19da3fd9790e" class="bulleted-list"><li style="list-style-type:square">배경색을 지정할 수 없다</li></ul><pre id="c6175d93-6f6d-4603-9377-9d69a80d9199" class="code"><code>.margin{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}</code></pre></li></ul><ul id="51362ec8-5c8b-48f5-8f45-1030095cbf07" class="bulleted-list"><li style="list-style-type:circle"><strong><mark class="highlight-red">순서 기억(전체, 십자가, 나누기, 시계방향)</mark></strong><figure id="273bd4f9-74e8-49ca-9b57-82027484044e" class="image"><a href="230308%2056bce9bb381c4cea9d5877fd2f7aa8bf/Untitled%201.png"><img style="width:1369px" src="230308%2056bce9bb381c4cea9d5877fd2f7aa8bf/Untitled%201.png"/></a></figure></li></ul></li></ul><ul id="c2285fd9-5151-4467-9455-e106f42580b9" class="bulleted-list"><li style="list-style-type:disc">Box Sizing<ul id="4f391d68-a0ff-4127-a687-7ee6ec8038b2" class="bulleted-list"><li style="list-style-type:circle">기본적으로 모든 요소의  box-sizing은 content-box<ul id="c614c0cb-1e6a-473b-add2-fb2f95904a42" class="bulleted-list"><li style="list-style-type:square">Padding을 제외한 순수 contents 영역만을 box로 지정</li></ul></li></ul><ul id="f42620d9-3f10-4a0d-b00d-12683eb81725" class="bulleted-list"><li style="list-style-type:circle">다만, 우리가 일반적으로 영역을 볼 때는 border까지의 너비를 100px 보는 것을 원함<ul id="1ca503cf-9dd2-4dcd-a646-efb561e9ba82" class="bulleted-list"><li style="list-style-type:square">그 경우 box-sizing을 border-box로 설정</li></ul><figure id="144573c9-8936-460c-ab4d-ce3b04b7c11f" class="image"><a href="230308%2056bce9bb381c4cea9d5877fd2f7aa8bf/Untitled%202.png"><img style="width:749px" src="230308%2056bce9bb381c4cea9d5877fd2f7aa8bf/Untitled%202.png"/></a></figure></li></ul></li></ul><h2 id="ad367106-4fd9-4874-b740-7600d899d93f" class="">개발자 도구</h2><ul id="9afbedee-22b1-45d1-84eb-f60cba5b829c" class="bulleted-list"><li style="list-style-type:disc">크롬 개발자 도구<ul id="7340d73f-ab59-4b28-9669-2f5fa6b8699e" class="bulleted-list"><li style="list-style-type:circle">웹 브라우저 크롬에서 제공하는 개발과 관련된 다양한 기능 제공</li></ul><ul id="87ac4b74-7618-49bc-83a6-66cfec839565" class="bulleted-list"><li style="list-style-type:circle">주요 기능<ul id="d594dfb6-a1ec-4929-ae74-5decd9387ed5" class="bulleted-list"><li style="list-style-type:square">Elements - DOM 탐색 및 CSS 확인 및 변경<ul id="49a0b68d-3d48-4483-888c-fc80ce301202" class="bulleted-list"><li style="list-style-type:disc">Styles - 요소에 적용된 CSS 확인</li></ul><ul id="8e47f97c-0a90-42df-b0d1-f674b7a1d0d9" class="bulleted-list"><li style="list-style-type:disc">Computed - 스타일이 계산된 최종 결과</li></ul><ul id="3157dd0a-0e9d-47ef-b5ab-ebfc5be05c57" class="bulleted-list"><li style="list-style-type:disc">Event Listeners - 해당 요소에 적용된 이벤트(JS)</li></ul></li></ul><ul id="94930450-6ac4-4558-a806-2c1ff0253d73" class="bulleted-list"><li style="list-style-type:square">Sources, Network, Performance, Application, Security, Audits 등</li></ul></li></ul></li></ul><h2 id="f2a42a22-d860-4200-aefb-93f2ae3971d1" class="">Box Model</h2><ul id="889c2d29-e615-408c-9f33-b8c62a4bd599" class="bulleted-list"><li style="list-style-type:disc">CSS 원칙 2<ul id="e1db8b4a-11f1-4994-9351-108bc1eb4d73" class="bulleted-list"><li style="list-style-type:circle">모든 요소는 네모이고, 좌측 상단에 배치</li></ul><ul id="e2eaf691-e87e-4ebc-853c-64cb1ab02930" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red">display에 따라 크기와 배치가 달라진다</mark></li></ul></li></ul><ul id="ff9e8a91-5eb7-4b6f-aedd-284b7a5cef04" class="bulleted-list"><li style="list-style-type:disc">인라인 / 블록 요소<ul id="3928c745-5296-4887-bfd7-d60de5338f7a" class="bulleted-list"><li style="list-style-type:circle">블록 요소<ul id="1740521e-367e-4fe1-97c4-dc40fefbbd37" class="bulleted-list"><li style="list-style-type:square">한줄 전체를 차지</li></ul><ul id="e3543e09-ca12-408d-b1ba-b592ca4f9a86" class="bulleted-list"><li style="list-style-type:square">div를 2개 쓰면 밑으로 두줄</li></ul><ul id="975071ff-2f31-44d3-9a22-0b596295746b" class="bulleted-list"><li style="list-style-type:square">너비, 높이, 마진을 지정할 수 있다</li></ul></li></ul><ul id="736c2f81-17ff-42e3-bff1-058f4bba7e4c" class="bulleted-list"><li style="list-style-type:circle">인라인 요소<ul id="0663837a-0c8a-46ef-bdcd-32fcf5e808dd" class="bulleted-list"><li style="list-style-type:square">in line : 줄 안에</li></ul><ul id="3c9a7488-dde4-4d2a-849f-fc92997fb38e" class="bulleted-list"><li style="list-style-type:square">한 줄 전체를 차지 하지 않고 <mark class="highlight-red">content 영역만큼만</mark> 차지</li></ul><ul id="6410e90d-7d04-47b2-8c57-6cee15ebd8ef" class="bulleted-list"><li style="list-style-type:square">span같은 요소를 쓰면 그 content에 맞는 요소만큼만 차지</li></ul></li></ul></li></ul><ul id="596902e7-b80a-4a65-b3d9-c17553d1e5ee" class="bulleted-list"><li style="list-style-type:disc">대표적으로 활용되는 display<ul id="d7852cab-82d2-484a-a65a-20f9395abbe2" class="bulleted-list"><li style="list-style-type:circle">display: block<ul id="f7e6d245-4062-4a4c-8bfa-2d15b87e2342" class="bulleted-list"><li style="list-style-type:square">줄바꿈이 일어나는 요소<mark class="highlight-red">(다른 elem을 밀어낸다!)</mark></li></ul><ul id="c9ff2fb7-b179-4c83-87de-6269b12c2cf7" class="bulleted-list"><li style="list-style-type:square">화면 크기 전체의 가로 폭을 차지</li></ul><ul id="d46508c9-5cc9-4d20-a712-a8e53c9540d2" class="bulleted-list"><li style="list-style-type:square">블록 레벨 요소 안에 인라인 레벨 요소가 들어갈 수 있음</li></ul><ul id="abadb91e-c19d-4db6-b858-1f87b7ad8b37" class="bulleted-list"><li style="list-style-type:square">대표적인 블록 레벨 요소<ul id="d2548fc4-252b-4be4-9929-dd303afbe9f7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">div</mark> / ul, ol, li / <mark class="highlight-red">p</mark> / hr / form 등</li></ul></li></ul></li></ul><ul id="8789d368-51a9-46c6-b4e8-b19861890ec7" class="bulleted-list"><li style="list-style-type:circle">display: inline<ul id="3ee7a6ae-f0cc-4235-9067-6d0679cb6593" class="bulleted-list"><li style="list-style-type:square">줄바꿈이 일어나지 않는 행의 일부 요소</li></ul><ul id="aae85351-cf06-42a5-9877-f0ed419c06f7" class="bulleted-list"><li style="list-style-type:square">content를 마크업 하고 있는 만큼만 가로 폭을 차지</li></ul><ul id="325c2baf-eb5d-4280-9561-c4d58c166466" class="bulleted-list"><li style="list-style-type:square">width, height, margin-top, margin-bottom을 지정할 수 없음</li></ul><ul id="b88d2ab9-659f-4ab4-9670-2f20b6ca7fa7" class="bulleted-list"><li style="list-style-type:square"><del>상하 여백은 line-height로 지정</del></li></ul><ul id="bb7fb8ba-9447-4309-af1d-8c54f00333b7" class="bulleted-list"><li style="list-style-type:square">대표적인 인라인 레벨 요소<ul id="62ad1885-5dd2-4abc-90ca-78277bcc5b58" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">span</mark> / <mark class="highlight-red">a</mark> / img / input, label / b, em, i, strong 등</li></ul></li></ul></li></ul></li></ul><ul id="ee72ecc2-8006-47a1-a32b-1f23c712f5b5" class="bulleted-list"><li style="list-style-type:disc">속성에 따른 수평 정렬<ul id="c8617998-a5ef-4445-a07e-53adc8f1f8d9" class="bulleted-list"><li style="list-style-type:circle">box - 여백을 정렬<pre id="7f451926-b01d-4aeb-9cc8-c2fba897ca60" class="code"><code>/*왼쪽*/
+margin-right: auto;/*여백 오른쪽을 정렬*/</code></pre><pre id="e21cfdd1-88d7-4842-900a-1dac545ec3dd" class="code"><code>/*오른쪽*/
+margin-left: auto;/*여백 왼쪽을 정렬*/</code></pre><pre id="52e9e46c-0dfa-4446-a8aa-e1c84c0d0b2b" class="code"><code>/*중간*/
+margin-right: auto;
+margin-left: auto;/*여백 오른쪽, 왼쪽 둘 다 정렬*/</code></pre></li></ul><ul id="52468123-7529-4693-9d92-24e2d89e6f92" class="bulleted-list"><li style="list-style-type:circle">inline - 텍스트 를 정렬<pre id="25b8ad54-356c-486d-a51a-7df8716d03d0" class="code"><code>text-align: left;/*텍스트 를 왼쪽에 정렬*/</code></pre><pre id="b10b181f-9ece-4b2e-abaf-e86c55f7badd" class="code"><code>text-align: right;/*텍스트 를 오른쪽에 정렬*/</code></pre><pre id="53932af2-916b-4205-bbc6-ecff23d2d1cd" class="code"><code>text-align: center;/*텍스트 를 중간에 정렬*/</code></pre></li></ul><ul id="e7767008-05a7-40bc-bc73-f514be9ba250" class="bulleted-list"><li style="list-style-type:circle">상하 여백은 line-height로 지정</li></ul></li></ul><h3 id="ebf4a3ea-f0b6-4273-b569-c7bd63f5ac96" class="">display</h3><ul id="40a635d3-f76b-4f43-b0a7-7f574c3beadb" class="bulleted-list"><li style="list-style-type:disc">display: inline-block<ul id="4ac5b568-69de-485f-8e8c-67eca5485a97" class="bulleted-list"><li style="list-style-type:circle">block과 inline 레벨 요소의 특징을 모두 가짐</li></ul><ul id="9e208f2f-bfbc-4d76-a268-37d67ff3e8cf" class="bulleted-list"><li style="list-style-type:circle">inline처럼 한 줄에 표시 가능하고, block처럼 width, height, margin 속성을 모두 지정할 수 있음</li></ul></li></ul><ul id="97cc13e7-f0e6-46a8-b972-dc1efc1fa0bb" class="bulleted-list"><li style="list-style-type:disc">display: none<ul id="b50f9d3c-37ea-4a10-a599-85cd63ab7cab" class="bulleted-list"><li style="list-style-type:circle">해당 요소를 화면에 표시하지 않고, 공간조차 부여되지 않음</li></ul><ul id="9eed10f4-7a7f-4fba-a19e-6293229015a0" class="bulleted-list"><li style="list-style-type:circle">이와 비슷한 visibility: hidden은 해당 요소가 공간은 차지하나 화면에 표시만 하지 않는다</li></ul></li></ul><ul id="324ff306-b9df-4645-943e-b545ed817cf8" class="bulleted-list"><li style="list-style-type:disc">이 외 다양한 속성은 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/display">여기</a></li></ul><p id="f925fd6c-3d00-4165-bf90-c496dc465645" class="">
+</p><h2 id="fa199f73-bd8c-45aa-8028-aaa242d0a743" class="">CSS Position</h2><ul id="3c17039a-3e20-4109-84b6-702a29f6dfbb" class="bulleted-list"><li style="list-style-type:disc">모를때는 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/position">여기로</a></li></ul><ul id="c38faa92-c790-44cb-b2ca-dbf4a0f8f338" class="bulleted-list"><li style="list-style-type:disc">문서 상에서 요소의 위치를 지정(어떤 기준으로 어디에 배치 시킬지)<ul id="045560c0-0e86-4474-a66a-955a5ce687e2" class="bulleted-list"><li style="list-style-type:circle">static<ul id="0dfb4b5b-daed-47a0-b839-b808d4e689a1" class="bulleted-list"><li style="list-style-type:square">모든 태그의 기본값(기준 위치)</li></ul><ul id="495a1e3c-a160-4953-ba07-3974ce01f0d4" class="bulleted-list"><li style="list-style-type:square">일반적인 요소의 배치 순서에 따름(좌측 상단)</li></ul><ul id="8712dd0e-88f6-457a-b41d-16399bdcab38" class="bulleted-list"><li style="list-style-type:square">부모 요소 내에서 배치될 때는 부모 요소의 위치를 기준으로 배치됨</li></ul><pre id="eb9786d9-7ba8-4587-b285-1d8dfadba7cc" class="code"><code>div{
+	height: 100px;
+	width : 100px;
+	background-color: #9775fa;
+	color: black;
+	line-height: 100px;
+	text-align: center;
+}</code></pre></li></ul><ul id="56207ca7-722e-4f19-be2a-9cf653e6459c" class="bulleted-list"><li style="list-style-type:circle">아래는 좌표를 사용하여 이동 가능<ul id="2367a4e9-a60b-47e9-b72a-e8145d7f5325" class="bulleted-list"><li style="list-style-type:square">relative : 상대 위치<ul id="29a04a4d-f93a-43ea-94a8-a9078de968db" class="bulleted-list"><li style="list-style-type:disc">자기 자신의 static 위치를 기준으로 이동(normal flow 유지)</li></ul><ul id="9784058b-dc47-40a6-8aa9-3cf103c3d7ff" class="bulleted-list"><li style="list-style-type:disc">레이아웃에서 요소가 차지하는 공간은 static 일 때와 같음(normal position 대비 offset)</li></ul><pre id="d1af7162-6522-4b56-b557-ff572a419d79" class="code"><code>.relative{
+	position: relative;
+	top: 100px;
+	left: 100px;
+}</code></pre></li></ul><ul id="bf874bad-486f-4ab7-a055-bec54715681a" class="bulleted-list"><li style="list-style-type:square">absolute : 절대 위치<ul id="1627c8d6-0d60-40dc-93b3-8601f3ddcc75" class="bulleted-list"><li style="list-style-type:disc">요소를 일반적인 문서 흐름에서 제거 후 레이아웃에 공간을 차지하지 않음(normal flow에서 벗어남)</li></ul><ul id="839350d3-a539-42b8-b0fa-170fe6f13f04" class="bulleted-list"><li style="list-style-type:disc">static이 아닌 가장 가까이 있는 부모 / 조상 요소를 기준으로 이동(없는 경우 body)</li></ul><pre id="3e46928d-9946-454b-93bb-263e4c8f2da4" class="code"><code>.parent{
+	position: relative;
+}
+
+.absolute-child{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}</code></pre></li></ul><ul id="09086ae3-dc0c-4ae4-bdad-29d7213cedf0" class="bulleted-list"><li style="list-style-type:square">fixed : 고정 위치<ul id="8c091da5-88fe-42bb-ad59-5f4b5d124c25" class="bulleted-list"><li style="list-style-type:disc">요소를 일반적인 문서 흐름에서 제거 후 레이아웃에 공간을 차지하지 않음(normal flow에서 벗어남)</li></ul><ul id="46a13933-2089-4256-a340-d44f150728c6" class="bulleted-list"><li style="list-style-type:disc">부모 요소와 관계없이 viewport(실제로 보고있는 화면)를 기준으로 이동<ul id="251ba329-62d0-44d7-8e0e-0edcda2fc161" class="bulleted-list"><li style="list-style-type:circle">스크롤 시에도 항상 같은 곳에 위치함</li></ul></li></ul><pre id="3e06c474-a357-4555-8317-1ea387ce9d17" class="code"><code>.fixed{
+	postition: fixed;
+	bottom: 0;
+	right: 0;
+}</code></pre></li></ul><ul id="1671c378-f655-4e91-9216-5b67da8d0da6" class="bulleted-list"><li style="list-style-type:square">sticky<ul id="66af8497-aee0-4c29-98de-7d2c6605681d" class="bulleted-list"><li style="list-style-type:disc">스크롤에 따라 static → fixed로 변경<ul id="3d173c4a-7fd6-40c3-91cc-c94d7eb7efbc" class="bulleted-list"><li style="list-style-type:circle">속성을 적용한 박스는 평소에 문서 안에서 position: static 상태와 같이 일반적인 흐름에 따르지만, 스크롤 위치가 임계점에 이르면 position: fixed와 같이 박스를 화면에 고정할 수 있는 속성</li></ul></li></ul></li></ul></li></ul></li></ul><p id="87ed2dbb-f3c3-41ca-b49f-ed0da0136c29" class="">
+</p></div></article></body></html>

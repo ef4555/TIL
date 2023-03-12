@@ -1,0 +1,36 @@
+.box { 
+    width: 100px;
+    height: 100px;
+}
+
+.big {
+    position: relative;
+    margin: 100px auto 500px;
+    border: 5px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.small {
+    width: 100px;
+    height: 100px;
+
+}
+
+#red {
+    background-color: red;
+}
+
+#gold {
+    background-color: gold;
+}
+
+#green{
+    background-color: green;
+}
+#blue {
+    background-color: blue;
+}
+#pink {
+    background-color: pink;
+}

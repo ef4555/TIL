@@ -1,0 +1,31 @@
+.container {
+    background-color: cadetblue;
+    height: 300px;
+    display : flex;
+}
+.item { 
+    background-color: tan;
+    border: 1px solid black;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.order1 {
+    order: 1;
+}
+
+.order2 {
+    order: 2;
+}
+
+.order3 {
+    order: 3;
+}
+
+.grow-1 {
+    flex-grow: 1;
+}
+
+.grow-3 {
+    flex-grow: 3;
+}

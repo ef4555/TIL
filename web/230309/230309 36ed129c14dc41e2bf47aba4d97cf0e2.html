@@ -1,0 +1,745 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>230309</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="36ed129c-14dc-41e2-bf47-aba4d97cf0e2" class="page sans"><header><h1 class="page-title">230309</h1></header><div class="page-body"><h1 id="78322f86-baf4-44da-acbb-49d51a469102" class="">CSS Layout</h1><h2 id="1bce6b87-13c3-4ece-8ee5-4204a7ae631d" class="">CSS 원칙 1</h2><ul id="6fbb8546-8318-4dba-a4fb-46f243af0681" class="bulleted-list"><li style="list-style-type:disc">모든 요소는 네모(박스모델)이고, 위에서부터 아래로, 왼쪽에서 오른쪽으로 쌓인다</li></ul><p id="359f0634-4873-4e59-b6f4-a0779dd95784" class="">
+</p><p id="8259a1b6-cf96-4e85-8982-a0e098d85b15" class="">→ 어떤 요소를 감싸는 형태로 배치하려면? 또는 왼쪽 / 오른쪽에 배치하는 방법은?</p><p id="577a4aae-36b6-47b2-b190-61c4bc231b57" class="">
+</p><h2 id="b25cc8e8-c9e3-478f-b504-367e2c167c42" class="">Float</h2><ul id="10166244-7245-457c-8bf9-318b42ae292b" class="bulleted-list"><li style="list-style-type:disc">띄우자! 라는 생각을 함</li></ul><ul id="817f996f-19fb-4fbb-b765-9d447271c368" class="bulleted-list"><li style="list-style-type:disc">박스를 왼쪽 혹은 오른쪽으로 이동시켜 텍스트를 포함한 인라인 요소들이 주변을 wrapping 하도록 함</li></ul><ul id="2ed6e39d-92cf-4183-ad42-ebf48770f0e6" class="bulleted-list"><li style="list-style-type:disc">요소가 Normal Flow를 벗어나도록 함</li></ul><ul id="c1a408f3-c687-47aa-ae82-23fa8b842921" class="bulleted-list"><li style="list-style-type:disc">속성<ul id="fbbf8eef-4416-4a7e-af93-00c4c300f966" class="bulleted-list"><li style="list-style-type:circle">none : 기본값</li></ul><ul id="6bf11bd9-ffb9-4653-a47f-3d4595b35c82" class="bulleted-list"><li style="list-style-type:circle">left : 요소를 왼쪽으로 띄움</li></ul><ul id="030f224f-ad43-4c01-acad-06653edbc3f9" class="bulleted-list"><li style="list-style-type:circle">right : 요소를 오른쪽으로 띄움<figure id="1d3b8f0e-7a9c-4da3-96ec-fb7dc2301a27" class="image"><a href="Untitled.png"><img style="width:415px" src="Untitled.png"/></a></figure></li></ul></li></ul><ul id="36867d7d-8ee8-4cf6-af93-6dcced251ac2" class="bulleted-list"><li style="list-style-type:disc">예시<pre id="d75eca96-e50a-46b4-ba70-1c63c158497e" class="code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;float.css&quot;&gt;
+  &lt;title&gt;Float&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+
+    &lt;div class=&quot;header&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box2 left&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box3 right&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><pre id="7af5644f-0a7b-4fcc-8915-1eb5535b2ae1" class="code"><code>.header{
+  height: 100px;
+  background-color:indigo;
+  border: 1px solid black;
+}
+
+.box2{
+  width: 300px;
+  height: 500px;
+  border: 1px solid black;
+  background-color: rgb(30, 92, 92);
+}
+
+.box3{
+  width: 200px;
+  height: 500px;
+  border: 1px solid black;
+  background-color: rgb(143, 223, 119);
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}</code></pre></li></ul><ul id="194c4575-3214-4fb8-a8fa-f9b6e8acaf2c" class="bulleted-list"><li style="list-style-type:disc">정리<ul id="1c360d88-c1ef-46af-bbab-c8596a7d8a75" class="bulleted-list"><li style="list-style-type:circle">Float는 레이아웃을 구성하기 위해 필수적으로 활용되었지만 최근 Flexbox, Grid 등장과 함께 사용도가 낮아짐</li></ul><ul id="95dd5fbd-97b1-4343-8110-2eeb4693b487" class="bulleted-list"><li style="list-style-type:circle">활용전략 - Normal Flow에서 벗어난 레이아웃 구성<ul id="b502297f-2823-4867-8f09-16beb95aa81b" class="bulleted-list"><li style="list-style-type:square">원하는 요소들을 Float로 지정하여 배치</li></ul></li></ul></li></ul><p id="83a81b0d-fab4-4fa8-b2d4-b4ae34cedc5e" class="">
+</p><p id="c3255c2f-4c15-495a-837d-48ca91b28fe2" class="">
+</p><p id="5840f577-53ab-4536-affb-5345791737d6" class=""><strong><mark class="highlight-red">다음중 noraml flow를 벗어나는 것은? - absolute</mark></strong></p><p id="28b2a69d-5005-4ade-a48e-a18c42e7d6c8" class=""><strong><mark class="highlight-red">박스 안에 세로로 인라인을 정렬하고 싶으면 line - height 주면 된다!</mark></strong></p><p id="c0739b9b-f363-4c1a-beb3-3614af34d995" class="">
+</p><h2 id="f7636cf5-559f-41ed-b785-cf02edd43b90" class="">Layout을 위해 탄생한 Flexbox</h2><ul id="da462405-735c-44a5-bf3e-c573e38f904b" class="bulleted-list"><li style="list-style-type:disc">Float를 사용한 Layout은 솔직히 어려워,,</li></ul><ul id="81790b38-59a9-4e50-9123-e56897f7830f" class="bulleted-list"><li style="list-style-type:disc">Layout에 특화된 기능 만들자!</li></ul><ul id="0d1cda58-5232-471c-8778-f5ba49d2e60c" class="bulleted-list"><li style="list-style-type:disc">하기 어려웠던 것?<ul id="204f14d9-ef57-4723-a3aa-684c2e1dcf13" class="bulleted-list"><li style="list-style-type:circle">수직 정렬</li></ul><ul id="4f77171e-0056-4f6e-aec5-1d9e91c77952" class="bulleted-list"><li style="list-style-type:circle">아이템의 너비와 높이 혹은 간격을 동일하게 배치</li></ul></li></ul><h2 id="7e127235-93c4-4160-ab38-064d3677b83a" class="">CSS Flexible Box Layout</h2><ul id="055b7858-546f-4d85-a9ce-89256955023b" class="bulleted-list"><li style="list-style-type:disc">메인 컨셉 - 컨테이너를 두고 안쪽에 아이템을 넣자!<ul id="7c1a014d-e47c-42fc-b6f8-a7f36d8d4650" class="bulleted-list"><li style="list-style-type:circle">아이템들을 컨테이너를 활용해 정렬 하자!</li></ul></li></ul><ul id="34848aeb-5598-4b02-a976-8351e3fe9e14" class="bulleted-list"><li style="list-style-type:disc">행과 열 형태로 아이템들을 배치하는 1차원 레이아웃 모델</li></ul><ul id="9c9938e6-253c-4601-b47e-df2ae6f378dc" class="bulleted-list"><li style="list-style-type:disc">축<ul id="3b729d2b-a514-421b-bb1b-952e923fd994" class="bulleted-list"><li style="list-style-type:circle">main axis (메인 축)(가로)</li></ul><ul id="fb1f28db-2af2-4761-90af-d1b0d7bb03c6" class="bulleted-list"><li style="list-style-type:circle">cross axis (교차 축)(수직)</li></ul><ul id="a7df3fa1-01b6-4476-9b50-f6c32bdab6bf" class="bulleted-list"><li style="list-style-type:circle">세로로 쌓이고 정렬한다면 main / cross axis 바뀜</li></ul></li></ul><ul id="4e151584-f09e-44e6-b024-a27cea4ed40e" class="bulleted-list"><li style="list-style-type:disc">예시<pre id="d0c6956a-d9e7-40eb-a97c-46e016c31c01" class="code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;float.css&quot;&gt;
+  &lt;title&gt;Float&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><pre id="e62c1c85-71fb-4956-8f9f-b498cb01d029" class="code"><code>.container{
+  display: flex;
+}
+
+.item{
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  margin-right: 20px;
+  margin-top: 20px;
+}</code></pre></li></ul><ul id="d5964bc7-a522-479e-8af4-0c71870bee98" class="bulleted-list"><li style="list-style-type:disc">구성요소<ul id="d4567c9d-4088-49e8-909d-b73d0b97cba3" class="bulleted-list"><li style="list-style-type:circle">Flex Container(부모 요소)<ul id="b64ce893-7a0b-496e-8c86-a3349d210e4b" class="bulleted-list"><li style="list-style-type:square">flexbox 레이아웃을 형성하는 가장 기본적인 모델</li></ul><ul id="7d584511-6e02-4e02-b9cc-0de18d81fd33" class="bulleted-list"><li style="list-style-type:square">Flex Item들이 놓여있는 영역</li></ul><ul id="4600a825-c7f8-4520-8f1c-2ac45d6edad4" class="bulleted-list"><li style="list-style-type:square">display 속성을 flex 혹은 inline-flex로 지정</li></ul></li></ul><ul id="37563eb9-8461-4fe7-9f5a-f9dafad8b5a0" class="bulleted-list"><li style="list-style-type:circle">Flex Item(자식 요소)<ul id="57fe2d99-80f9-46b1-89d6-417587923025" class="bulleted-list"><li style="list-style-type:square">컨테이너에 속해있는 컨텐츠</li></ul></li></ul></li></ul><ul id="0d8ac5cb-452d-4856-a176-9064d6cfc047" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">아이템이 쌓이는 방향이 메인</mark></strong></li></ul><ul id="e7ca9594-b6aa-41ff-b523-f7440d63cbd0" class="bulleted-list"><li style="list-style-type:disc">속성<ul id="7bc459bf-29bf-4748-b442-22294ecc4a33" class="bulleted-list"><li style="list-style-type:circle">배치설정<ul id="c9499a5e-095d-4589-9aed-85b1784ae8d7" class="bulleted-list"><li style="list-style-type:square">flex-direction<figure id="9867f52a-1057-4c4d-9fa2-945121df214f" class="image"><a href="Untitled%201.png"><img style="width:871px" src="Untitled%201.png"/></a></figure><ul id="46da7ac2-a014-45a2-9e99-202b7f239efb" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Main axis 기준방향 설정</mark></strong></li></ul><ul id="d0323263-e357-448d-9021-993f3e504062" class="bulleted-list"><li style="list-style-type:disc">역방향의 경우 HTML 태그 선언 순서와 시각적으로 다르니 유의</li></ul></li></ul><ul id="9f06fdca-6847-49f3-a09b-f6787cf4c6da" class="bulleted-list"><li style="list-style-type:square">flex-wrap<ul id="7205c79f-f83d-42c4-9c04-7f8a0ccfb47f" class="bulleted-list"><li style="list-style-type:disc">아이템이 컨테이너를 벗어나는 경우 해당 영역 내에 배치되도록 설정</li></ul><ul id="de6a19fc-0d50-489e-bcc0-967cb119d776" class="bulleted-list"><li style="list-style-type:disc">기본적으로 컨테이너 영역을 벗어나지 않도록 함<figure id="a5dccb77-3a03-4dac-9926-dc75908987e3" class="image"><a href="Untitled%202.png"><img style="width:395px" src="Untitled%202.png"/></a></figure></li></ul></li></ul><ul id="e48e4923-92ae-4ccb-8592-08a3fe10c062" class="bulleted-list"><li style="list-style-type:square">Flex 속성 : flex-direction &amp; flex-wrap<ul id="4ccc8809-4b79-48b6-b962-5b84c6841b75" class="bulleted-list"><li style="list-style-type:disc">flex-direction : Main axis의 방향을 설정</li></ul><ul id="fb77ce30-3720-4085-a12e-10ba7fcb5084" class="bulleted-list"><li style="list-style-type:disc">flex-wrap : 요소들이 강제로 한 줄에 배치되게 할 것인지 여부 설정<ul id="c925ec17-a31f-44bd-a82c-db6822161d7c" class="bulleted-list"><li style="list-style-type:circle">nowrap(기본값) : 한 줄에 배치</li></ul><ul id="db983a4f-698b-40e4-90cf-4f9430ab7b89" class="bulleted-list"><li style="list-style-type:circle">wrap : 넘치면 그 다음 줄로 배치</li></ul></li></ul><ul id="dc8faf14-4cc8-4463-be53-958c698760bb" class="bulleted-list"><li style="list-style-type:disc">flex-flow<ul id="7dd723c9-b2c5-42f8-9a7f-e3645bfb7c74" class="bulleted-list"><li style="list-style-type:circle">flex-direction과 flex-wrap의 shorthand</li></ul><ul id="bcfb8ab7-afb0-4ed7-b540-3c92c3d74b00" class="bulleted-list"><li style="list-style-type:circle">flex-direction과 flex-wrap에 대한 설정 값을 차례로 작성</li></ul><ul id="b4200ae9-ca10-45e7-9ed8-20c60bd3b8ff" class="bulleted-list"><li style="list-style-type:circle">예 : flex-flow: row nowrap;</li></ul></li></ul></li></ul></li></ul><ul id="669bef7d-db8b-419d-bd58-0335342ce3c9" class="bulleted-list"><li style="list-style-type:circle">공간 나누기 - <strong><mark class="highlight-red">공백을 어떻게 둘지 알려주는 거</mark></strong><ul id="dc95ccbd-c2c8-441c-82c2-af9d773ea5ba" class="bulleted-list"><li style="list-style-type:square">justify-content(main axis)<figure id="3cd2dce4-5d1a-4fa8-82db-b1d47137872d" class="image"><a href="Untitled%203.png"><img style="width:854px" src="Untitled%203.png"/></a></figure><ul id="bcfb6e67-3926-4d51-b8ff-8ee0eafb3329" class="bulleted-list"><li style="list-style-type:disc">Main axis 를 기준으로 공간 배분<ul id="d76b73d5-9f30-4b60-a8fc-d3a74e41ac2e" class="bulleted-list"><li style="list-style-type:circle">space-between : 각각의 아이템 사이 <mark class="highlight-red">공백이 일정</mark>함</li></ul><ul id="91f719ca-ab03-4fa5-a932-ce309a16549d" class="bulleted-list"><li style="list-style-type:circle">space-evenly : 아이템을 둘러싼 <mark class="highlight-red">마진이 일정</mark>함</li></ul></li></ul></li></ul><ul id="722c5390-fc21-4f38-a900-fd0ba1ecb639" class="bulleted-list"><li style="list-style-type:square">align-content(cross axis)<figure id="7eb69930-0d61-4346-811e-1613abb77e95" class="image"><a href="Untitled%204.png"><img style="width:579px" src="Untitled%204.png"/></a></figure><ul id="a1dc1f03-d956-4ed7-83eb-1c6741c7c89d" class="bulleted-list"><li style="list-style-type:disc">Cross axis 를 기준으로 공간 배분(아이템이 한 줄로 배치되는 경우 확인할 수 없음)</li></ul></li></ul><ul id="724bf3e7-9c92-4c42-ba8e-401db70b9e82" class="bulleted-list"><li style="list-style-type:square">Flex 속성 : justify-content &amp; align-content<ul id="827b0383-9e78-409a-b92e-5d5f84cddd87" class="bulleted-list"><li style="list-style-type:disc">공간 배분<ul id="2b466fc7-1f91-4050-82f9-1a2141c24c0b" class="bulleted-list"><li style="list-style-type:circle">flex-start(기본값) : 아이템들을 axis 시작점으로</li></ul><ul id="e9389a57-cc91-4dab-8b2f-b9d1ad871328" class="bulleted-list"><li style="list-style-type:circle">flex-end : 아이템들을 axis 끝 쪽으로</li></ul><ul id="cc5f13c6-92de-4b27-afdb-58e74cd32fdd" class="bulleted-list"><li style="list-style-type:circle">center : 아이템들을 axis 중앙으로</li></ul><ul id="d2250d08-9fbe-407b-aaf6-702254ba2be0" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red"><strong>space-between : 아이템 사이의 간격을 균일하게 분배</strong></mark></li></ul><ul id="d7a9ce51-9850-47ee-84a5-71d32f316001" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red"><strong>space-around : 아이템을 둘러싼 영역을 균일하게 분배(가질 수 있는 영역을 반으로 나눠서 양쪽에)</strong></mark></li></ul><ul id="da0e5690-eecc-43c2-bf9b-311c790b7648" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red"><strong>space-evenly : 전체 영역에서 아이템 간 간격을 균일하게 분배</strong></mark></li></ul></li></ul></li></ul></li></ul><ul id="a42f9760-2a4a-45aa-b3bb-3fbd14f88774" class="bulleted-list"><li style="list-style-type:circle">정렬<ul id="b4398259-b596-4786-bd31-f95ed13d2040" class="bulleted-list"><li style="list-style-type:square">align-items<figure id="f84ef505-8598-4cd3-9b2d-ea1fab7a5680" class="image"><a href="Untitled%205.png"><img style="width:845px" src="Untitled%205.png"/></a></figure><ul id="f4c06c93-d952-484e-808d-807a4d759cc0" class="bulleted-list"><li style="list-style-type:disc">모든 아이템을 Cross axis 기준으로 정렬</li></ul><ul id="dc760db5-7960-4e8a-9442-89e1e4035121" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">align-items: center; ← 매우 많이 씀</mark></strong></li></ul></li></ul><ul id="13b66b32-d72e-480b-9d10-563845144ad0" class="bulleted-list"><li style="list-style-type:square">align-self(개별 아이템)<figure id="a83033f5-7a9f-45e4-97dc-0d2b87d2522b" class="image"><a href="Untitled%206.png"><img style="width:850px" src="Untitled%206.png"/></a></figure><ul id="3b74e150-b73b-41f6-8658-97ad7bbfc591" class="bulleted-list"><li style="list-style-type:disc">개별 아이템을 Cross axis 기준으로 정렬<ul id="e5995e3c-3668-4219-be8c-b825bc433088" class="bulleted-list"><li style="list-style-type:circle"><strong><mark class="highlight-red">해당 속성은 컨테이너에서 적용하는것이 아닌 개별 아이템에 적용!</mark></strong></li></ul></li></ul></li></ul><ul id="1626df5a-e967-4023-b90d-efa493b0987a" class="bulleted-list"><li style="list-style-type:square">Flex 속성 : align-items &amp; align-self<ul id="ff3225ea-fd1e-41c1-92c7-46d8285bfc69" class="bulleted-list"><li style="list-style-type:disc">Cross axis를 중심으로<ul id="7f06c4c1-fc45-4718-9148-4596c3106f0b" class="bulleted-list"><li style="list-style-type:circle">stretch(기본값) : 컨테이너를 가득 채움</li></ul><ul id="df319ba4-04b8-4e65-b908-86ede4265bd5" class="bulleted-list"><li style="list-style-type:circle">flex-start : 위</li></ul><ul id="dbc87673-5cae-4b8b-9081-3a54ed6a809b" class="bulleted-list"><li style="list-style-type:circle">flex-end : 아래</li></ul><ul id="f0b56e73-9039-4ec1-a171-f86c6795ca6b" class="bulleted-list"><li style="list-style-type:circle">center : 가운데</li></ul><ul id="88bd3fad-506d-43fc-9878-208d9a982542" class="bulleted-list"><li style="list-style-type:circle">baseline : 텍스트 baseline에 기준선을 맞춤</li></ul></li></ul></li></ul><ul id="cc3f0aed-9a54-482d-8f74-91e4b127f535" class="bulleted-list"><li style="list-style-type:square">Flex 속성<ul id="648818ff-b043-48b9-9f5e-8dad9cc04fb1" class="bulleted-list"><li style="list-style-type:disc">기타 속성<ul id="722e98ad-d848-475c-9e89-17aec11582c7" class="bulleted-list"><li style="list-style-type:circle">flex-grow : 남은 영역을 아이템에 분배</li></ul><ul id="9686aed8-0c3c-4dd1-ab5e-75cfbc964796" class="bulleted-list"><li style="list-style-type:circle">order : 배치 순서</li></ul></li></ul></li></ul></li></ul></li></ul></div></article></body></html>
