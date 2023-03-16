@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>throw</h1>
+<form action='{% url 'articles:create' %}' method="GET">
+  <label for='message'> 보내고 싶은 데이터 적기</label>
+  <input type='text' id='message' name="message">
+  <input type='text' id='message' name="content">
+  <input type='text' id='message' name="author">
+  <input type="submit">
+</form>
+
+{% endblock content %}
