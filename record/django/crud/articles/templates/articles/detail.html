@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="bg-primary text-white">게시판 글 내용</h1>
+  <hr>
+  <h3>{{article.pk}} 번째 글</h3>
+  <p>생성시각: {{ article.created_at }}</p>
+  <hr>
+  <p>수정시각: {{ article.updated_at }}</p>
+  <hr>
+  <p>글 제목: {{ article.title }}</p>
+  <hr>
+  <p>글 내용: {{ article.content }}</p>
+  <hr>
+
+  <a href="{% url "articles:edit" article.pk %}">
+    <p>게시글 수정</p>
+  </a>
+
+  <a href="{% url "articles:delete" article.pk %}">
+    <p>게시글 삭제</p>
+  </a>
+  <hr>
+  <a href="{% url 'articles:index' %}">목록보기</a>
+
+{% endblock content %}
+
+
