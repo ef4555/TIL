@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>Catch</h1>
+
+  <h2>보낸 데이터 : {{ message }}</h2>
+
+  <a href="{% url 'articles:throw' %}">다시 데이터 보내러가기</a>
+
+{% endblock content %}
