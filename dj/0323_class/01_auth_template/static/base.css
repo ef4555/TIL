@@ -1,0 +1,42 @@
+img {
+  width: 200px;
+}
+
+a {
+  color: blue;
+}
+
+#content {
+  padding: 20px;
+}
+
+#delete-btn {
+  border: 0;
+  outline: 0;
+  color: red;
+  text-decoration: underline;
+  background: none;
+  padding: 0px;
+}
+
+#delete-form {
+  display: inline;
+}
+
+#nav {
+  text-align: right;
+  padding: 10px 30px 10px;
+}
+
+#user-hello {
+  text-align: right;
+  padding-right: 30px;
+}
+
+#article-title {
+  text-decoration: none;
+}
+
+#article-content {
+  padding: 20px;
+}

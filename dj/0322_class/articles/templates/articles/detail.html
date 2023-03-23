@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>DETAIL</h1>
+  <hr>
+  {% if article.image %}
+    <img src="{{article.image.url}}"> 
+  {% endif %}
+
+  <p>글 제목 : {{article.title}}</p>
+  <p>글 내용 : {{article.content}}</p>
+  <p>생성시각 : {{article.created_at}}</p>
+  <p>수정시각 : {{article.updated_at}}</p>
+
+  <hr>
+  <a href="{% url 'articles:index' %}">목록보기</a>
+  <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+  <form action="{% url 'articles:delete' article.pk %}">
+    {% csrf_token %}
+    <input type="submit" value="삭제하기">
+  </form>
+  
+
+{% endblock content %}

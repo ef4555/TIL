@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>This is Index</h1>
+{% for article in articles %}
+<div class="container">
+    <div class="col-12 border">
+        <p class="p-2 mb-0 col-12">{{article.content}}</p>
+        <a class="col-2 btn btn-danger text-white fs-6 btn-sm m-2" href="{% url 'posts:delete' article.pk %}">
+            <span>delete</span>
+        </a>
+    </div>
+</div>
+
+{% endfor %} {% endblock content %}
