@@ -25,12 +25,10 @@ def choice(x, r):
 
 
     for i in range(N):
-        row[x] = i
-        if arr[x][row[x]] == 0:
-            continue
-        if f(x):
-            # r*=arr[x][i]/100
+        if row[i] == 0:
+            row[i] = 1
             choice(x+1, r*arr[x][i]/100)
+            row[i] = 0
                 
                 
 T = int(input())
