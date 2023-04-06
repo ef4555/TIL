@@ -26,23 +26,57 @@ print(c)
                     visited[na][nb] = visited[x][y] + 1
                     dfs(na, nb, arr[na][nb], 1, c+1)
 
-'''
+
 def dfs(x, y, h, t):
-    global m
+    global m, visited
     m = max(m, visited[x][y])
     for l in range(4):
             na = x + dr[l][0]
             nb = y + dr[l][1]
-            if 0 <= na < N and 0 <= nb < N and arr[na][nb] < h :
+            # if not (0 <= na < N and 0 <= nb < N) or visited[na][nb]:
+            #     continue
+        
+            if 0 <= na < N and 0 <= nb < N and visited[na][nb] == 0 and arr[na][nb] < h :
                 visited[na][nb] = visited[x][y] + 1
                 dfs(na, nb, arr[na][nb], t)
                 visited[na][nb] = 0
-            elif t == 1 and 0 <= na < N and 0 <= nb < N and arr[na][nb]-t < h:
-                visited[na][nb] = visited[na][nb] -1
+            elif t == 1 and 0 <= na < N and 0 <= nb < N and visited[na][nb] == 0 and arr[na][nb]-K < h:
+                tmp = arr[na][nb]
+                arr[na][nb] = arr[x][y] - 1
                 visited[na][nb] = visited[x][y] + 1
-                dfs(na, nb, arr[na][nb], 0)
+                dfs(na, nb, arr[na][nb], t - 1)
                 visited[na][nb] = 0
-                
+                arr[na][nb] = tmp
+    return
+
+
+'''
+
+# 처음에 DFS인지 BFS인지 혼돈
+# 재귀 안쓰고 구현했으나 인자 초기화에 어려움을 겪음
+# 재귀로 구현해야 초기화해서 탐색하기가 편함
+# 0 <= na < N and 0 <= nb < N and visited[na][nb] == 0 : 순서 주의. visited가 먼저면 인덱스 오류
+def dfs(x, y, h, t):
+    global m, visited
+    m = max(m, visited[x][y])
+    for l in range(4):
+            na = x + dr[l][0]
+            nb = y + dr[l][1]
+            # if not (0 <= na < N and 0 <= nb < N) or visited[na][nb]:
+            #     continue
+        
+            if 0 <= na < N and 0 <= nb < N and visited[na][nb] == 0 and arr[na][nb] < h :
+                visited[na][nb] = visited[x][y] + 1
+                dfs(na, nb, arr[na][nb], t)
+                visited[na][nb] = 0
+            elif t == 1 and 0 <= na < N and 0 <= nb < N and visited[na][nb] == 0 and arr[na][nb]-K < h:
+                tmp = arr[na][nb]
+                arr[na][nb] = arr[x][y] - 1
+                visited[na][nb] = visited[x][y] + 1
+                dfs(na, nb, arr[na][nb], t - 1)
+                visited[na][nb] = 0
+                arr[na][nb] = tmp
+    return
 
 
 T = int(input())

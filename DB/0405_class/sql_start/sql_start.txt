@@ -1,0 +1,10 @@
+sqlite3 기본설치 및 환경변수 설정을 합니다.
+bash 터미널에서 mkdir dbproblem 명령어를 통해 폴더를 생성합니다.
+cd dbproblem 하여 폴더를 이동합니다.
+code ~/.bashrc 를 입력하여 .bashrc라는 파일 에디터창을 vscode로 오픈합니다.
+.bashrc내부에 alias sqlite3="winpty sqlite3" 을 입력하고 저장합니다.
+vscode 터미널을 열어 source ~/.bashrc를 실행합니다.
+sqlite3 database.sqlite3 를 입력하여 실습할 데이터베이스를 생성합니다.
+이미 database.sqlite3파일이 존재한다면 동일한 명령어 sqlite3 database.sqlite3 를 이용하여 실행합니다.
+sqlite> 가 되었다면 .mode column 을 실행하여 컬럼 별로 볼 수 있게 설정합니다.
+그리고 .header on 을 실행하여 칼럼명을 같이 확인할 수 있게 설정합니다.
