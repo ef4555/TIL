@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<h1>DETAIL</h1>
+<hr />
+
+{% if article.image %}
+<img src="{{article.image.url}}" />
+{% endif %}
+
+<div id="article-content">
+  <p><b>작성자 : {{article.user}}</b></p>
+  <p>글 제목 : {{article.title}}</p>
+  <p>글 내용 : {{article.content}}</p>
+  <p>생성시각 : {{article.created_at}}</p>
+  <p>수정시각 : {{article.updated_at}}</p>
+
+  <hr />
+  {% if request.user == article.user %}
+  <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+  <form action="{% url 'articles:delete' article.pk %}" id="delete-form">
+    {% csrf_token %}
+    <input type="submit" value="삭제하기" id="delete-btn" />
+  </form>
+  <br />
+  <hr />
+  {% endif %}
+
+
+  <a href="{% url 'articles:index' %}">목록보기</a>
+  <hr />
+
+
+  <h4>댓글 목록</h4>
+  {% if comments %}
+  <p><b>{{ comments|length }}개의 댓글</b></p>
+  {% endif %}
+  <ul>
+    {% for comment in comments %}
+    <li>{{ comment.content }} [{{ comment.user }}]</li> 
+    {% if request.user == comment.user %}
+    <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="DELETE" />
+    </form>
+  {% endif %}
+  {% empty %}
+  <p>댓글이 없어요..</p>
+  {% endfor %}
+
+  {% if user.is_authenticated %}
+  </ul>
+  <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
+    {% csrf_token %} {{ comment_form }} 
+    <input type="submit" />
+  </form>
+  {% endif %}
+</div>
+{% endblock content %}
