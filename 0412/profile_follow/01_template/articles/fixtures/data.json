@@ -1,0 +1,126 @@
+[
+{
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "title": "dd",
+        "content": "sdasdsad",
+        "image": "",
+        "created_at": "2023-04-12T02:34:59.828Z",
+        "updated_at": "2023-04-12T02:34:59.828Z",
+        "like_users": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+        "user": 3,
+        "title": "코코",
+        "content": "코코",
+        "image": "",
+        "created_at": "2023-04-12T02:35:39.383Z",
+        "updated_at": "2023-04-12T02:35:39.383Z",
+        "like_users": [
+            3
+        ]
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 1,
+    "fields": {
+        "user": 3,
+        "article": 2,
+        "content": "코코밥",
+        "created_at": "2023-04-12T02:35:42.614Z",
+        "updated_at": "2023-04-12T02:35:42.614Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 2,
+    "fields": {
+        "user": 3,
+        "article": 1,
+        "content": "코코코",
+        "created_at": "2023-04-12T02:35:52.807Z",
+        "updated_at": "2023-04-12T02:35:52.807Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "article": 1,
+        "content": "코지마",
+        "created_at": "2023-04-12T02:35:56.190Z",
+        "updated_at": "2023-04-12T02:35:56.190Z"
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$bjXcVufuUpgs4bK0VMhmu9$wO8plivjfMFWNvrJR4ZDHEgruLY/nS1o7WamYxfxWkY=",
+        "last_login": "2023-04-12T02:34:56.145Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@admin.kr",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-04-12T02:34:33.833Z",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$07ZUYcwv6CurPv55RzFunR$BPkFpvr8tJMCv/Dch3/ciQRxeSmi8ZUWYQ3Zoqpr7n4=",
+        "last_login": "2023-04-12T02:35:19.894Z",
+        "is_superuser": false,
+        "username": "coco",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-12T02:35:19.818Z",
+        "groups": [],
+        "user_permissions": [],
+        "followings": [
+            1
+        ]
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$0BDk1XAtIllGCG7nN3bdjC$zKHMD5sOv8Z8PS+GPPMo6DQGbVbBtbGrb4Isj6PWeF0=",
+        "last_login": "2023-04-12T02:35:31.307Z",
+        "is_superuser": false,
+        "username": "coco2",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-12T02:35:31.233Z",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+}
+]

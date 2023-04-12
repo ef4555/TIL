@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+  <h1>INDEX</h1>
+  <a href="{% url 'articles:create' %}">작성하기</a>
+  <hr />
+
+  {% for article in articles %}
+    <p>
+      [{{article.id}}] 
+      <a href="{% url 'articles:detail' article.pk %}" id="article-title">{{article.title}}</a>
+      - 작성자: <a href="{% url 'accounts:profile' article.user.username %}">{{article.user}}</a>
+    </p>
+    {% if request.user.is_authenticated %}
+      <div>
+        <form action="{% url 'articles:likes' article.pk %}" method="POST">
+          {% csrf_token %}
+          {% if request.user in article.like_users.all %}
+            <input type="submit" value="안좋아해!">
+          {% else %}
+            <input type="submit" value="좋아해!">
+          {% endif %}
+        </form>
+      </div>
+    {% endif %}
+    <hr />
+  {% endfor %} 
+
+{% endblock content %}

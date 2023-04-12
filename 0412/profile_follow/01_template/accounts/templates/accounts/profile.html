@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{ person.username }}님의 프로필</h1>
+<div>
+  <div>
+    팔로잉 : {{ person.followings.count }} / 팔로워 : {{ person.followers.count }}
+  </div>
+</div>
+{% if request.user != person %}
+{% if request.user.is_authenticated %}
+<div>
+  <form action="{% url 'accounts:follow' person.pk %}" method="POST">
+    {% csrf_token %}
+    {% if request.user in person.followers.all %}
+      <input type="submit" value="Unfollow" class="btn btn-danger">
+    {% else %}
+      <input type="submit" value="follow" class="btn btn-success">
+    {% endif %}
+  </form>
+</div>
+{% endif %}
+{% endif %}
+<hr>
+
+<h2> {{ person.username }}님의 게시글 </h2>
+{% for article in person.article_set.all %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ article.title }}</h5>
+    <p class="card-text">{{ article.content }}</p>
+    <a href="{% url 'articles:detail' article.pk %}" class="btn btn-primary">자세히 보기</a>
+  </div>
+</div>
+<div>{{ article.title }} </div>
+{% endfor %}
+<hr><br><br>
+
+<h2> {{ person.username }}님이 좋아요 한 게시글 </h2>
+{% for article in person.like_article.all %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ article.title }}</h5>
+    <p class="card-text">{{ article.content }}</p>
+    <a href="{% url 'articles:detail' article.pk %}" class="btn btn-primary">자세히 보기</a>
+  </div>
+</div>
+<div>{{ article.title }} </div>
+{% endfor %}
+<hr><br><br>
+<a href="{% url 'articles:index' %}" class="btn btn-success"></a>
+
+<a href="{% url 'articles:index' %}">back</a>
+
+{% endblock content %}
+
+
