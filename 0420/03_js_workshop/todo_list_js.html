@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="app"></div>
+  <input type="text" id="todo" placeholder="Todo">
+  <input type="text" id="content" placeholder="Content">
+  <button id="event-button">
+    생성
+  </button>
+
+  <div class="container">
+
+    <section id="cardsSection" class="row">
+      
+      <!-- 카드 예시 -->
+      <article class="col-4">
+        <div class="card m-1">
+          <div class="card-body">
+            <h5 class="card-title">Example</h5>
+            <p class="card-text">This is a card example.</p>
+          </div>
+        </div>
+      </article>
+      <!-- 카드 예시 -->
+
+      <!-- JS로 위와 동일한 카드를 생성하여 section#cardSection의 자식으로 추가 -->
+      
+    </section>
+    
+
+  </div>
+
+  <script>
+    // div#app 요소 선택
+    const div = document.querySelector('#app')
+    // h1 태그를 createElement 로 생성
+    const h1 = document.createElement('h1')
+    // 생성한 h1태그의 내용을 '오늘의 Todo' 로 설정
+    const ul = document.createElement('ul')
+    h1.innerText = '오늘의 Todo'
+    // ul, li 태그들을 생성 및 내용 추가
+    
+    // 각 태그들을 적절하기 div#app 요소에 자식요소로 추가. (#app > ul > li)
+    div.appendChild(h1)
+    div.appendChild(ul)
+    // section#cardSection에 예시와 같은 카드를 생성하여 추가하는 코드를 작성하시오.
+    function createCard(title, content) {
+      const cardsSection = document.querySelector('#cardsSection')
+      const article = document.createElement('article')
+      article.setAttribute('class', 'col-4')
+      
+      const card = document.createElement('div')
+      card.setAttribute('class', 'card m-1')
+      
+      const card_body = document.createElement('div')
+      card_body.setAttribute('class', 'card-body')
+
+      const card_title = document.createElement('h5')
+      card_title.setAttribute('class', 'card-title')
+      card_title.innerText = title
+
+      const card_text = document.createElement('p')
+      card_text.setAttribute('class', 'card-text')
+      card_text.innerText = content
+
+
+      article.appendChild(card)
+      card.appendChild(card_body)
+      card_body.appendChild(card_title)
+      card_body.appendChild(card_text)
+
+      return article
+    }
+      
+    // 카드 생성
+    cardsSection.appendChild(createCard('Hello', 'World'))
+
+    document.querySelector('button').addEventListener('click', function() {
+      // tag를 가져오는지 값만 가져오는지 구분
+      let input_title = document.querySelector('#todo')
+      let input_content = document.querySelector('#content')
+      const newcard = createCard(input_title.value, input_content.value) 
+      cardsSection.appendChild(newcard)
+      console.log(document.querySelector('#todo'))
+
+      const liT = document.createElement('li')
+      liT.innerText = input_title.value
+      ul.appendChild(liT)
+
+      input_title.value = ''
+      input_content.value = ''
+    })
+
+    document.querySelector('#content').addEventListener('keypress', function(e) {
+      // tag를 가져오는지 값만 가져오는지 구분
+      if (e.key === 'Enter') {
+        let input_title = document.querySelector('#todo')
+        let input_content = document.querySelector('#content')
+        const newcard = createCard(input_title.value, input_content.value) 
+        cardsSection.appendChild(newcard)
+        console.log(document.querySelector('#todo'))
+
+        const liT = document.createElement('li')
+        liT.innerText = input_title.value
+        ul.appendChild(liT)
+
+        input_title.value = ''
+        input_content.value = ''
+      }
+    })
+
+  </script>
+</body>
+
+</html>
