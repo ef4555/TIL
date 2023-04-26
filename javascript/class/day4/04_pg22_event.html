@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      background-color: #ccc;
+      padding: 20px;
+      display: block;
+    }
+
+    p {
+      background-color: #aaa;
+      padding: 20px;
+      display: block;
+    }
+
+    span {
+      background-color: #888;
+      padding: 20px;
+      display: block;
+    }
+
+    section {
+        background-color: #4477AA;
+        padding: 0 10px 30px 20px;
+        margin: 50px 0 0 0;
+    }
+
+    section:before {
+        background-color: #114477;
+        padding: 5px;
+        margin: 0 0 0 -20px;
+        border-bottom: 2px solid #002244;
+        border-bottom-right-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        content:"결과 콘솔";
+    }
+  </style>
+</head>
+<body>
+  <div id="divTag">
+    DIV영역
+    <p id="pTag">
+        P영역
+        <span id="spanTag">SPAN영역</span>
+    </p>
+</div>
+
+<section id="console"><br></section>
+
+<script>
+  const divTag = document.querySelector('#divTag')
+  
+  const pTag = document.querySelector('#pTag')
+  const spanTag = document.querySelector('#spanTag')
+  const consoleSection = document.querySelector('#console')
+
+  divTag.addEventListener('click', function() {
+    const message = document.createElement("li")
+    message.innerText = "div 클릭"
+    consoleSection.append(message)
+    // consoleSection.innerHTML += "<br> div 클릭"
+  })
+
+  pTag.addEventListener('click', function() {
+    // consoleSection.innerHTML += "<br> p 클릭"
+    const message = document.createElement("li")
+    message.innerText = "p 클릭"
+    consoleSection.append(message)
+  })
+
+  spanTag.addEventListener('click', function() {
+    const message = document.createElement("li")
+    message.innerText = "span 클릭"
+    consoleSection.append(message)
+
+    // 상위로 이벤트가 전파되지 않도록 중단한다.
+    event.stopPropagation();
+
+    //상위 뿐 아니라 같은 레벨로도 이벤트가 전파되지 않도록 중단한다.
+    event.stopImmediatePropagation();
+    
+    
+  })
+  
+  // span 태그에 2번째 이벤트 등록
+  spanTag.addEventListener('click', function() {
+    const message = document.createElement("li")
+    message.innerText = "span 클릭2"
+    consoleSection.append(message)
+
+    // 상위로 이벤트가 전파되지 않도록 중단한다.
+    event.stopPropagation();
+
+    
+    
+  })
+
+
+</script>
+</body>
+</html>

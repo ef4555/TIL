@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="function">function</button>
+  <button id="arrow">arrow function</button>
+
+  <script>
+  //   // 1. 단순 호출
+  //   const myFunc = function () {
+  //     console.log(this) 
+  //   }
+  //   myFunc()
+
+  //   // 2. Method
+  //   const myObj = {
+  //     data: 1,
+  //     myFunc() {
+  //       console.log(this)
+  //       console.log(this.data)
+  //     }
+  //   }
+  //   myObj.myFunc()
+
+  //   // // 3-1. Nested (function)
+  //   const myObj = {
+  //   nums: [1, 2],
+  //   myFunc: function () {
+  //     console.log(this) // obj
+  //     console.log(this.nums) // nums
+  //     console.log('--------------------------')
+  //     this.nums.forEach(function (num) {
+  //       console.log(this)  // window
+  //     })
+  //     console.log('--------------------------')
+  //     // 3-2. Nested (arrow function)
+  //     this.nums.forEach((num) => {
+  //       console.log(this)  // obj
+  //     })
+  //   }
+  // }
+  // myObj.myFunc()
+
+    // this와 addEventListener
+    const functionButton = document.querySelector('#function')
+    const arrowButton = document.querySelector('#arrow')
+
+    functionButton.addEventListener('click', function(event) {
+      console.log(this) // <button id="function">function</button>
+    })
+
+    arrowButton.addEventListener('click', event => {
+      console.log(this) // window
+    })
+  </script>
+</body>
+</html>

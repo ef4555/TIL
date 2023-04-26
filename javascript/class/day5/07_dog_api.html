@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>멍멍아 이리온</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const dogImageSearchURL = "https://dog.ceo/api/breeds/image/random"
+    const dogBtn = document.querySelector('button')
+
+    // 버튼을 누를 때마다 강아지 사진 보여주기
+    dogBtn.addEventListener('click', function () {
+      // dog api에 비동기 요청 보내기
+      axios({
+        method: 'get',
+        url: dogImageSearchURL
+      })
+      .then((response) => {
+        // console.log(response.data.message)
+        const imgSrc = response.data.message
+        return imgSrc
+      })
+      .then((imgSrc) => {
+        const imgTag = document.createElement('img')
+        imgTag.setAttribute('src', imgSrc)
+        document.body.appendChild(imgTag)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    })
+
+
+  </script>
+</body>
+</html>
