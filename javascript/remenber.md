@@ -1,0 +1,13 @@
+# 외워두면 좋을 것
+- querySelector
+- querySelectorAll
+- appendChild
+- innerText()
+- setAttribute()
+- getAttribute() : getAttribute() 은 해당 요소에 지정된 값을 반환 합니다. 만약 주어진 속성이 존재 하지 않는 다면, null 값이나 ""(빈문자열); 을 반환 할 것입니다. 
+- createElement() : 태그 생성
+- classList 
+- addeventListener
+- setAttribute()
+  - aTag.setAttribute('href', 'https://www.ssafy.com/')
+- ${} 쓸때는 ``
