@@ -1,0 +1,8 @@
+npm install -g @vue/cli
+vue create vue-cli
+vue2
+cd vue-cli
+npm run serve
+
+vuex 사용 시:
+vue add vuex
