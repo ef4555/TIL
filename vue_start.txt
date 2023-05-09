@@ -6,3 +6,9 @@ npm run serve
 
 vuex 사용 시:
 vue add vuex
+
+vue router 시작:
+$ vue create vue-router-app
+$ cd vue-router-app
+$ vue add router
+history mode 사용 여부 => Yes
