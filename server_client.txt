@@ -1,0 +1,10 @@
+서버(장고)
+python -m venv venv
+source venv/Scripts/activate
+pip install -r requirements.txt
+
+클라이언트(뷰)
+npm install
+npm run serve
+
+server 폴더에서 마이그레이트 후 서버 실행
