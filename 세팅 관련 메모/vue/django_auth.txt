@@ -1,0 +1,48 @@
+TokenAuthentication
+
+토큰을 발급
+사용자한테 부여
+활동 할 때 서버와 클라이언트끼리 주고받음
+
+사용방법
+1. dj-rest-auth
+pip install dj-rest-auth 설치
+
+2. settings.py에 들어가서 앱 등록 ('rest_framework', dj_framework_authtoken, dj_rest_auth)
+REST_FRAMEWORK = {
+    # Authentication
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ], 추가
+3. urls.py에 등록
+urlpatterns = [
+	path('accounts/', include('dj_rest_auth.urls')),
+] 추가
+
+4. auth.User를 account.User로 변경 
+5. 데이터베이스 삭제 후 다시 마이그레이트
+
+
+회원가입 구현
+1. django-allauth 설치
+pip install 'dj-rest-auth[with_social]'
+
+2. settings.py에서 INSTALLED_APPS에 추가
+
+# registration
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
+
+
+3. urls.py 에 경로 설정
+path('accounts/signup/', include('dj_rest_auth.registration.urls'))
+
+4. 마이그레이트
+
+5. URL 주소로 가면 가입 양식 제공, 회원가입 가능
+
+가입하면 토큰 발급
+로그인시에도 토큰 발급

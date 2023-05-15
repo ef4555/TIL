@@ -1,0 +1,6 @@
+articles/views.py에 추가
+from rest_framework.decorators import permission_classes
+from rest_framework.permissions import IsAuthenticated
+
+권한 설정 원하는 기능 함수에
+@permission_classes([IsAuthenticated]) 부착
